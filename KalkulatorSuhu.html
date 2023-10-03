@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kalkulator Suhu</title>
+
+<script type="text/javascript">
+		function c(){
+			var cel=document.getElementById('celcius').value;
+			var far, kel;
+			far=9/5*parseInt(cel)+32;
+			kel=parseInt(cel)+273.15;
+			
+			document.getElementById('fahrenheit').value=far;
+			document.getElementById('kelvin').value=kel;
+		}
+	</script>
+</head>
+<body>
+	<fieldset style="width: 200px;margin: 0;">
+	<legend><b>Kalkulator Suhu</b></legend>
+	
+	Suhu<br>
+	<input type="number" placeholder="Masukan Nilai Celcius" id="celcius"> &deg;C<br><br>
+	Fahrenheit<br>
+	<input type="number" placeholder="Fahrenheit" id="fahrenheit" disabled=""> &deg;F<br><br>
+	Kelvin<br>
+	<input type="number" placeholder="Kelvin" id="kelvin" disabled=""> &deg;K<br><br>
+
+	<input type="submit" value="Submit" onclick="c()">
+	</fieldset>
+</body>
+</html>
